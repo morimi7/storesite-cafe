@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://github.com/filipelinhares/ress.git">
     <link rel="stylesheet" href="stylesheet.css">
     <!--javascript-->
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!---responsive-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--font-->
@@ -21,9 +21,9 @@
         <div class="header__bg">
           <nav class="header-nav">
             <ul class="header-nav__list">
-              <li class="header-nav__item"><a href=".menu" class="header-nav__link">Menu</a></li>
-              <li class="header-nav__item"><a href="#" class="header-nav__link">About</a></li>
-              <li class="header-nav__item"><a href="#"class="header-nav__link">Location</a></li>
+              <li class="header-nav__item"><a href="#menu" class="header-nav__link">Menu</a></li>
+              <li class="header-nav__item"><a href="#about" class="header-nav__link">About</a></li>
+              <li class="header-nav__item"><a href="#location" class="header-nav__link">Location</a></li>
             </ul>
           </nav>
           <h1 class="header__logo"><a class="header__link" href="#">Coffee</a></h1>
@@ -31,7 +31,7 @@
       </header>
 
       <main>
-        <section class="menu">
+        <section id="menu" class="menu">
           <div class="sec-bg menu__bg">
             <h2 class="sec-title">Menu</h2>
           </div>
@@ -85,7 +85,7 @@
             </div><!--menu__table-->
           </div><!--content-->
         </section>
-        <section class="about">
+        <section id="about" class="about">
           <div class="sec-bg about__bg">
             <h2 class="sec-title">About</h2>
           </div>
@@ -100,7 +100,7 @@
             <a href="#" class="more-button">Read More</a>
           </div>
         </section>
-        <section class="location">
+        <section id="location" class="location">
           <div class="sec-bg location__bg">
             <h2 class="sec-title">Location</h2>
           </div>
@@ -123,5 +123,7 @@
       </footer>
 
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
