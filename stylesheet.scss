@@ -58,6 +58,10 @@ ul,li,p{
   font-weight: bold;
   line-height: 300px;
   color: $color;
+  @include phone(){
+    font-size: 3.2em;
+    line-height: 94px;
+  }
 }
 .content__title{
   font-size: 4.0em;
@@ -65,6 +69,10 @@ ul,li,p{
   line-height: 74px;
   display: inline-block;
   border-bottom: 6px solid #e03131;
+  @include phone(){
+    font-size: 2em;
+    line-height: 27px;
+  }
 }
 
 .wrapper{
@@ -89,6 +97,9 @@ ul,li,p{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    @include phone(){
+      font-size: 8.4em;
+    }
   }
 }
 .header-nav{
@@ -111,16 +122,45 @@ ul,li,p{
 /****メニュー****/
 .menu{
   margin-top: 20px;
+  @include phone(){
+    margin-top: 10px;
+  }
   &__bg{
     background: url(img/menu.jpg);
     @include bg-fixed();
   }
   &__table{
     margin-top: 81px;
+    @include phone(){
+      margin-top: 30px;
+    }
     display: flex;
+    @include phone(){
+      flex-direction: column;
+      justify-content: space-between;
+    }
   }
   &__right,&__left{
     width: 50%;
+    @include phone(){
+      width: 100%;
+    }
+  }
+  &__left{
+    position: relative;
+    &::after{
+      display: block;
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 646px;
+      border-left: 1px solid #000;
+      top: 0;
+      right: 0;
+      @include phone(){
+        opacity: 0;
+      }
+    }
   }
   &__list{
     font-size: $text;
@@ -129,11 +169,19 @@ ul,li,p{
     justify-content: center;
     margin-top: 39px;
     margin-bottom: 82px;
+    @include phone(){
+      margin-top: -6px;
+      margin-bottom: 41px;
+    }
   }
   &__item{
     text-align: left;
     width: 68.2%;
     padding-top: 24px;
+    @include phone(){
+      padding-top: 32px;
+      width: 87.9%;
+    }
     &::after{
       display: block;
       content: "";
@@ -145,6 +193,10 @@ ul,li,p{
   &__price{
     padding-top: 24px;
     padding-left: 15px;
+    @include phone(){
+      padding-top: 32px;
+      padding-left: 0;
+    }
   }
 }
 
@@ -157,6 +209,9 @@ ul,li,p{
   }
   &__title{
     margin-top: 71px;
+    @include phone(){
+      margin-top: 30px;
+    }
   }
   &__list{
     margin-top: 80px;
@@ -167,6 +222,11 @@ ul,li,p{
     font-size: $text;
     line-height: 2;
     padding: 0 4.3%;
+    @include phone(){
+      margin-top: 30px;
+      grid-template-columns: repeat(1,1fr);
+      gap: 20px;
+    }
   }
   &__text{
     text-align: left;
@@ -212,18 +272,27 @@ ul,li,p{
 /***location***/
 .location{
   margin-top: 150px;
+  @include phone(){
+    margin-top: 80px;
+  }
   &__bg{
     background: url(img/location.jpg);
     @include bg-fixed()
   }
   &__title{
     margin-top: 66px;
+    @include phone(){
+      margin-top: 30px;
+    }
   }
   &__info{
     margin-top: 4px;
     padding-left: 16px;
     text-align: left;
     font-size: $text;
+    @include phone(){
+      padding-left: 0;
+    }
   }
   &__text{
     padding-top: 7px;
@@ -235,6 +304,10 @@ ul,li,p{
   height: 400px;
   margin-top: 73px;
   filter: grayscale(100%);
+  @include phone(){
+    margin-top: 25px;
+    width: 100%;
+  }
 }
 
 /****フッター****/
@@ -243,4 +316,7 @@ ul,li,p{
   margin-top: 185px;
   margin-bottom: 12px;
   font-style: 1em;
+  @include phone(){
+    margin-top: 145px;
+  }
 }
